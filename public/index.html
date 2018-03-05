@@ -202,12 +202,12 @@
                                 val2 = input2.value;
                                 arr1 = val1.split(" ");
                                 arr2 = val2.split(" ");
+                                arr1 = arr1.filter((arr) => arr !== "");
+                                arr2 = arr2.filter((arr) => arr !== "");
                                 for(i=0; i<=arr2.length - 1; i++){
                                         if(arr1[i]){
                                                 if(arr1[i] === arr2[i]){
-                                                        if(arr1[i]){
-                                                                resStr += `<span class="hl hl--green">${arr1[i]} </span>`;
-                                                        }
+                                                        resStr += `<span class="hl hl--green">${arr1[i]} </span>`;
                                                 }else if(arr1[i].toLowerCase() === arr2[i].toLowerCase()){
                                                         resStr += `<span class="hl hl--yellow">${arr2[i]} </span>`;
                                                 }else{
